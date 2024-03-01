@@ -1,6 +1,6 @@
 /*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
+ * This is a simple program that reads a number from the user and prints it if it's larger than 1,000,
+ * otherwise it prints a message indicating that the number is less than 1,000.
  */
 package methodsassignmentjava;
 
@@ -8,13 +8,24 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
+/**
+ * This class contains the main method to execute the program.
+ */
 public class MethodsAssignmentJava {
 
+    /**
+     * The main method of the program.
+     * @param args The command-line arguments (not used in this program).
+     */
     public static void main(String[] args) {
         // Call the number method to get user input and process it
         number();
     }
 
+    /**
+     * This method reads a number from the user and prints it if it's larger than 1,000,
+     * otherwise it prints a message indicating that the number is less than 1,000.
+     */
     public static void number() {
         BufferedReader reader = new BufferedReader(
                 new InputStreamReader(System.in));
@@ -26,7 +37,7 @@ public class MethodsAssignmentJava {
             double minimum = 1000;
 
             if (number >= minimum) {
-                // TODO: Format logic
+                // Format the number with comma for thousands separator
                 System.out.println( String.format("%,.2f", number));
             } else {
                 System.out.println("The number entered is less than 1,000.");
